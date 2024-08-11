@@ -4,7 +4,9 @@ from playwright.sync_api import Page
 class MainPageSelectors:
     INPUT_MIN_NUMBER = "//input[contains(@id, 'min')]"
     INPUT_MAX_NUMBER = "//input[contains(@id, 'max')]"
-    GENERATING_NUM = "//span[contains(@id, 'result')]//span[contains(@style, 'font-weight:bold')]"
+    GENERATING_NUM = (
+        "//span[contains(@id, 'result')]//span[contains(@style, 'font-weight:bold')]"
+    )
 
 
 class MainPage:
@@ -29,4 +31,6 @@ class MainPage:
         result = self.page.locator(self.selectors.GENERATING_NUM).first.text_content()
         min_number = int(min)
         max_number = int(max)
-        assert min_number <= int(result) <= max_number, f"Сгенерированное значение {result} не находится в диапазоне {min_number}-{max_number}"
+        assert (
+            min_number <= int(result) <= max_number
+        ), f"Сгенерированное значение {result} не находится в диапазоне {min_number}-{max_number}"

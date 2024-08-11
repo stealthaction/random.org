@@ -1,7 +1,7 @@
-from pages.main_page import MainPage
+import pytest
 from playwright.sync_api import Page
 
-import pytest
+from pages.main_page import MainPage
 
 
 @pytest.fixture
