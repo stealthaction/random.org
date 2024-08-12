@@ -2,7 +2,8 @@
 pytest tests/tests_random_generator.py
 
 пассрейт : 
-![image](https://github.com/user-attachments/assets/fde2d23c-3ca9-432c-99c2-f135f73ce613)
+![image](https://github.com/user-attachments/assets/473735c5-5fdf-437a-9ac0-679447b148bb)
+
 
 
 зависимости в файле requirements.txt
