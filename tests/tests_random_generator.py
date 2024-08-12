@@ -20,5 +20,6 @@ class TestsMainPage:
             main_page.open_page("https://www.random.org/")
         with allure.step(f"Ввод чисел от {min_number} до {max_number}"):
             main_page.generate_number(min_number, max_number)
+            main_page.click_button_generate()
         with allure.step("Проверка результата"):
             main_page.assert_result(min_number, max_number)
